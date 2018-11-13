@@ -24,7 +24,8 @@ const { VueLoaderPlugin } = require('vue-loader')
 let rendererConfig = {
   devtool: '#cheap-module-eval-source-map',
   entry: {
-    renderer: path.join(__dirname, '../src/renderer/main.js')
+    renderer: path.join(__dirname, '../src/renderer/main.js'),
+    // styles: path.join(__dirname, '../src/renderer/assets/styles/index.js')
   },
   // externals: [
   //   ...Object.keys(dependencies || {}).filter(d => !whiteListedModules.includes(d))
@@ -147,7 +148,7 @@ let rendererConfig = {
       '@': path.join(__dirname, '../src/renderer'),
       'vue$': 'vue/dist/vue.esm.js'
     },
-    extensions: ['.js', '.vue', '.json', '.css', '.node']
+    extensions: ['.js', '.vue', '.json', '.css', '.node', '.scss']
   },
   target: 'electron-renderer'
 }
